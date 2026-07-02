@@ -817,7 +817,7 @@
     </section>
 
     <!-- Футер -->
-    <footer class="bg-dark border-t border-gray-800 py-8">
+    <footer class="bg-dark border-t border-gray-800 py-8 ">
       <div class="max-w-7xl mx-auto px-4 text-center">
         <div class="text-2xl mb-2">✦</div>
         <div class="text-lg font-bold tracking-wider text-white mb-1">
@@ -851,7 +851,21 @@
         </p>
       </div>
     </footer>
-
+    <!-- Пульсуюча плаваюча кнопка (мобільна) -->
+<div id="stickyBar" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 md:hidden">
+  <div class="flex items-center bg-dark/90 backdrop-blur-lg rounded-full px-2 py-2 shadow-2xl border border-gold-500/30 gap-1">
+    <!-- Основна кнопка дзвінка з пульсацією -->
+    <a href="tel:+380734306997" 
+       class="btn-gold text-white px-5 py-3 rounded-full font-semibold flex items-center gap-2 text-sm animate-pulse-soft">
+      <i class="fas fa-phone"></i> Зателефонувати
+    </a>
+    <!-- Кнопка Telegram -->
+    <a href="https://t.me/+380734306997" target="_blank" 
+       class="flex items-center gap-2 text-white px-5 py-3 rounded-full font-semibold text-sm bg-gray-700 hover:bg-gray-600 transition">
+      <i class="fab fa-telegram-plane"></i> Telegram
+    </a>
+  </div>
+</div>
     <!-- JavaScript -->
     <script src="main.js"></script>
   </body>
