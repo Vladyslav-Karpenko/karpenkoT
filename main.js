@@ -71,14 +71,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
-// Показ плавающей панели после скролла
 const stickyBar = document.getElementById('stickyBar');
 if (stickyBar) {
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 500) {
-            stickyBar.classList.add('visible');
-        }
-        if (window.scrollY < 8000) {
+        const scrollY = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
+
+        // Показываем, если проскроллили больше 500px И не дошли до низа 100px
+        if (scrollY > 500 && (scrollY + windowHeight < documentHeight - 100)) {
             stickyBar.classList.add('visible');
         } else {
             stickyBar.classList.remove('visible');
