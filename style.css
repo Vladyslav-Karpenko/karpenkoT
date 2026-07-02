@@ -1,0 +1,82 @@
+.glass-card {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(212, 165, 32, 0.2);
+      }
+
+      .hero-gradient {
+        background: linear-gradient(
+          135deg,
+          #faf8f5 0%,
+          #f0e6d3 50%,
+          #e8d5b7 100%
+        );
+      }
+
+      .gold-gradient {
+        background: linear-gradient(135deg, #d4a520, #e5b637, #d4a520);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .btn-gold {
+        background: linear-gradient(135deg, #d4a520, #e5b637);
+        transition: all 0.3s ease;
+      }
+      .btn-gold:hover {
+        background: linear-gradient(135deg, #b88a1a, #d4a520);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px rgba(212, 165, 32, 0.3);
+      }
+
+      .portfolio-item {
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+      }
+      .portfolio-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(26, 26, 26, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+      }
+      .portfolio-item:hover .portfolio-overlay {
+        opacity: 1;
+      }
+
+      .price-card {
+        transition: all 0.3s ease;
+      }
+      .price-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+      }
+
+      .modal {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.9);
+        z-index: 1000;
+        align-items: center;
+        justify-content: center;
+      }
+      .modal.active {
+        display: flex;
+      }
+
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #faf8f5;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #d4a520;
+        border-radius: 4px;
+      }
